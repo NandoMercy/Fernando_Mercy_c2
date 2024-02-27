@@ -1,1 +1,0 @@
-# examen-parcial-react
