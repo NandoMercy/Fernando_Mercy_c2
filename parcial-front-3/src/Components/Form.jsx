@@ -11,7 +11,8 @@ const Form = ({ onSubmit }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    if (favorito.nombre.length > 3) {
+    const trimmedNombre = favorito.nombre.trim();
+    if (trimmedNombre.length >= 3 && !trimmedNombre.startsWith(' ')) {
       setShow(true)
       setErr(false)
       onSubmit(favorito)
