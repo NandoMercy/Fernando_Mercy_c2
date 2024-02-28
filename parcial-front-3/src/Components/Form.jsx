@@ -44,7 +44,7 @@ const Form = ({ onSubmit }) => {
           <button>Enviar</button>
         </form>
       )}
-      {err && <p>Coloque la información correctamente, Para nombre: Minimo 3 letras, Para Libro: Minimo 6 letras</p>}
+      {err && <p>Por favor chequea que la información sea correcta</p>}
       <hr />
     </>
   );
