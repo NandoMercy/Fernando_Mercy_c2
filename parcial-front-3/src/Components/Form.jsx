@@ -12,7 +12,7 @@ const Form = ({ onSubmit }) => {
   const handleSubmit = (e) => {
     e.preventDefault()
     const trimmedNombre = favorito.nombre.trim();
-    if (trimmedNombre.length >= 3 && !trimmedNombre.startsWith(' ')) {
+    if (trimmedNombre.length >= 3 && !trimmedNombre.startsWith(' ') && favorito.libro.length >= 6) {
       setShow(true)
       setErr(false)
       onSubmit(favorito)
@@ -44,7 +44,7 @@ const Form = ({ onSubmit }) => {
           <button>Enviar</button>
         </form>
       )}
-      {err && <p>Coloque la información correctamente</p>}
+      {err && <p>Coloque la información correctamente, Para nombre: Minimo 3 letras, Para Libro: Minimo 6 letras</p>}
       <hr />
     </>
   );
